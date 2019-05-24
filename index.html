@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lian_theme</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/script-home.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+	$(function() {
+  
+  $("#toggle").click(function() {
+    $(this).toggleClass("on");
+    $("#resize").toggleClass("active");
+  });
+  
+});
+</script>
+<header class="main-header">
+	<nav class="container">
+		<a class="logo" href="">
+			<img class="picture-logo" src="img/img1.png" alt="logo-picture">
+		</a>
+		<div class="nav-button"></div>
+		<form action="" method="get" id="searchForm">
+			<input type="text" name="" placeholder="Search on site...">
+			<button type="submit"><i id="search" class="fas fa-search"></i></button>
+		</form>
+		<ul  id="menu">
+			<li class="selected"><a href="#">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+<section class="sectionArea">
+
+<div class="slide-container">
+    <div class="new-cover">
+		<div class="text-block">
+			<h1 class="mainSub">Lian creative agency</h1>
+			<p class="littleSub">minimal freelance portfolio</p>
+		</div>
+
+		  	<img class="mySlides" src="img/img2.jpg" style="display: block;" alt="slide1">
+			<img class="mySlides" src="img/img3.jpg" alt="slide2">
+		    <img class="mySlides" src="img/img4.jpg" alt="slide3">
+		 
+			  <div class="buttonSection">
+				  <button class="slider-button1" onclick="plusDivs(1)"><i class="fas fa-angle-double-right"></i></button>
+				  <button class="slider-button2" onclick="plusDivs(1)"><i class="fas fa-angle-double-left"></i></button>
+			  </div>
+    </div>
+</div>
+</section>
+<main>
+	<nav class="subNavigation">
+		<ul id="menu-list">
+		  <li><a class="items" href="#">All</a></li>
+		  <li><a class="items" href="#">Logo</a></li>
+		  <li><a class="items" href="#">Mobile</a></li>
+		  <li><a class="items" href="#">wordpress</a></li>
+		  <li><a class="items" href="#">design</a></li>
+		  <li><a class="items" href="#">UI/UX</a></li>
+		  <li><a class="items" href="#">Brands</a></li>
+		 </ul>
+
+		<div id="toggle">
+			<div class="span" id="one"></div>
+			<div class="span" id="two"></div>
+			<div class="span" id="three"></div>
+	 	</div>
+	  
+
+		<div id="resize">
+			<ul id="menu">
+			    <li><a href="javascript:;">All</a></li>
+			    <li><a href="javascript:;">Logo</a></li>
+			    <li><a href="javascript:;">Mobile</a></li>
+			    <li><a href="javascript:;">Wordpress</a></li>
+			    <li><a href="javascript:;">Design</a></li>
+			    <li><a href="javascript:;">UI</a></li>
+			    <li><a href="javascript:;">Brands</a></li>
+			</ul>
+	</nav>
+	<div class="main-container">
+		<div class="column">
+			<div class="imgContainer"><a href=""><img src="img/img5.png" alt="image"></a></div>  
+			<div class="imgContainer"><a href=""><img src="img/img6.png" alt="image"></a></div>
+			<div class="imgContainer"><a href=""><img src="img/img11.png" alt="image" ></a></div> 
+		</div>
+		<div class="column">
+			<div class="imgContainer"><a href=""><img src="img/img9.png" alt="image"></a></div>
+			<div class="imgContainer"><a href=""><img src="img/img8.png" alt="image"></a></div>
+			<div class="imgContainer"><a href=""><img src="img/img10.png" alt="image"></a></div>
+		</div>
+		<div class="column">
+			<div class="imgContainer"><a href=""><img src="img/img7.png" alt="image"></a></div> 
+			<div class="imgContainer"><a href=""><img src="img/img6.png" alt="image"></a></div> 
+			<div class="imgContainer"><a href=""><img src="img/img11.png" alt="image"></a></div>
+		</div>
+		<button class="loadButton">Load more</button>
+	</div>
+</main>
+<footer>
+<div class="footer-container">
+	<div class="wrapper">
+ 				<ul>
+  
+   					<li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+    				<li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+    				<li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
+    				<li class="whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+    				<li class="facebook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+  				</ul>
+    		
+				<div class="footer-aside">
+					<span>&copy;Lian All Rights Reserved</span>
+				</div>
+	</div>
+
+</div>
+</footer>
+</body>
+</html>

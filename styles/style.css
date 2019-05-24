@@ -1,0 +1,548 @@
+*,*:after,*:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	overflow-x: hidden;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+.container {
+	margin: 0 auto;
+	width: 100%;
+	/*max-width: 960px;*/
+	padding: 0 15px;
+	height: 65px;
+
+}
+.main-header {
+	width: 100%;
+	background: white;
+	box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+.changeColor {
+	background-color: #F5F5F5;
+}
+.sectionArea {
+	margin-top: 5%;
+}
+.logo {
+	display: block;
+	float: left;
+}
+
+.picture-logo {
+	width: 70px;
+	height: auto;
+}
+#menu {
+	float: right;
+	margin-top: -6px;
+
+}
+#menu li {
+	display: inline-block;
+	margin-right: 40px;
+}
+
+#menu a {
+	color: #696969;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	display: block;
+	line-height: 40px;
+
+}
+#menu a:hover {
+	color: black;
+}
+#menu li:last-child {
+	margin-right: 0;
+}
+#searchForm {
+	float: right;
+	margin-left: 46px;
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+}
+#searchForm input {
+	width: 170px;
+	float: left;
+	border: none;
+	padding-left: 10px;
+	height: 40px;
+	overflow: hidden;
+	outline: none;
+	color: #9E9C9C;
+	font-style: italic;
+}
+#searchForm button {
+	background: transparent;
+	height: 40px;
+	border: none;
+	position: absolute;
+	right: 10px;
+	color: #EF5A42;
+	cursor: pointer;
+	font-size: 18px;
+}
+.selected:before {
+	content: '';
+	width: 20px;
+	display: inline-block;
+	border-bottom: 2px solid black;
+	vertical-align: middle;
+	margin-left: -30px;
+	margin-bottom: -55px;
+}
+
+
+
+
+/*slider*/
+
+.slide-container img {
+	width: 100%;
+	max-height: 410px; 
+}
+.new-cover {
+	position: relative;
+}
+.mySlides {
+	display: none;
+}
+.mySlides img {
+	width: 100%;
+}
+.slider-button1, .slider-button2 {
+	display: inline-block;
+	border: 1px solid silver;
+	padding: 5px;
+	background-color: #DCDCDC;
+	border-radius: 20% 20%;
+	outline: none;
+	cursor: pointer;
+}
+.buttonSection {
+	position: relative;
+}
+.slider-button2 {
+	position: absolute;
+	bottom: 40%;
+	right: 50.3%;
+
+}
+.slider-button1 {
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+}
+#search {
+	color: silver;
+}
+.text-block {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	left:24%;
+	bottom: 45%;
+	width: 60%;
+}
+
+.mainSub {
+	background-color: black;
+	color: white;
+	font-size: 3em;
+	padding: 8px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: lighter;
+	font-family: 'Quicksand', sans-serif;
+}
+.littleSub {
+	letter-spacing: 0.3em;
+	font-family: 'Indie Flower', cursive;
+	margin-top: 20px;
+	margin-left: 110px;
+}
+
+
+/*sub-navigation*/
+
+.subNavigation {
+	margin: 0 auto;
+	width: 100%;
+	/*max-width: 960px;*/
+	padding: 18px 15px;
+	height: 65px;
+}
+
+#menu-list {
+	float: right;
+	margin-top: 10px;
+	text-align: center;
+
+}
+#menu-list li {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#menu-list a {
+  position: relative;
+  display: block;
+  margin: 0 30px;
+  padding: 3px 8px;
+  color: #696969;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+
+}
+#menu-list a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: black;
+  transition: 0.5s;
+}
+#menu-list a:hover {
+  color: white;
+}
+#menu-list a:hover::before {
+  animation: animate .5s linear forwards; 
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+
+/*burger-menu*/
+
+#toggle {
+  position: relative;
+  /*right: 10px;
+  top: 14px;*/
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  float: left;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#toggle .span {
+  height: 7px;
+  background: #333;
+  margin: 5px auto;
+  backface-visibility: hidden;
+}
+
+#toggle.on #one {
+  transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+#toggle.on #two {
+  opacity: 0;
+}
+
+#toggle.on #three {
+  transform: rotate(-45deg) translateX(10px) translateY(-12px);
+}
+
+#resize {
+  z-index: 1;
+  position: absolute;
+  background: #ddd;
+  width: 40%;
+  height: 30%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  display: table;
+}
+
+#resize #menu li {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  min-height: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#resize #menu li:hover {
+  background: #212121;
+}
+
+#resize #menu li:hover a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+#resize #menu li a {
+  color: #212121;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 0.99;
+}
+
+.toggle-cover {
+	position: relative;
+}
+
+
+
+/*image container*/
+.main-container {
+	margin-top: 12px;
+	margin-left: 18%;
+	max-width: 925px;
+	padding: 35px;
+	background-color: #fafafa;
+}
+  .main-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+}
+
+
+.column {
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 8px;
+  flex-basis: 350px;
+}
+
+.column img {
+  border: 2px solid black;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  filter: gray; /* IE5+ */
+      -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+      -webkit-transition: all .8s ease-in-out; 
+}
+.column img:hover {
+	filter: none;
+      -webkit-filter: grayscale(0);
+      -webkit-transform: scale(1.01);
+}
+
+
+.loadButton {
+	background-color: gray;
+	padding: 6px;
+	border: 1px solid gray;
+	border-radius: 10% 10%;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4); 
+	text-transform: uppercase;
+	color: white;
+	position: relative;
+	left: 50%;
+	top: 25px;
+	cursor: pointer;
+	outline: none;
+}
+
+/*footer*/
+
+.wrapper ul {
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  left: 43%;
+
+}
+
+.wrapper ul li {
+  width: 10px;
+  height: 7px;
+  margin: 0 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  float: left;
+
+}
+
+.wrapper ul li:hover.facebook {
+ 
+	transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover.twitter {
+  
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+  
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li:hover.google {
+  
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-google {
+  color: #dd4b39;
+  text-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+
+/* whatsapp */
+.wrapper ul li:hover.whatsapp {
+  
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.footer-aside {
+	position: absolute;
+	bottom: 23%;
+	left: 44%;
+}
+.footer-container {
+	margin-top: 120px;
+	background-color: #DCDCDC;
+	min-height: 130px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+@media screen and (max-width: 800px) {
+	.text-block {
+		width: 100%;
+		font-size: 1vw;
+	}
+	.littleSub {
+		font-size: 2vw;
+	}	
+}
+
+@media screen and (max-width: 600px) {
+	.text-block {
+		width: 100%;
+		font-size: 1vw;
+	}
+	.littleSub {
+		font-size: 2vw;
+	}
+}
+@media and screen (max-width: 600px) {
+	#menu-list li {
+		display: block;
+	}
+}
+@media (max-width: 768px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+  }
+  .subNavigation #menu-list {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+	.picture-logo {
+		display: none;
+	}
+	#searchForm {
+		display: none;
+	}
+	#menu {
+		height: 50px;
+	}
+	#menu li {
+		margin-right: 10px;
+	}
+}
